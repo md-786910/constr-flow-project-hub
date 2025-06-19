@@ -63,10 +63,10 @@ export function AppSidebar() {
   const location = useLocation();
 
   return (
-    <Sidebar className="border-r border-orange-200">
-      <SidebarHeader className="border-b border-orange-100 p-4">
+    <Sidebar className="border-r border-[#7bcd40]/20">
+      <SidebarHeader className="border-b border-[#7bcd40]/20 p-4">
         <div className="flex items-center space-x-2">
-          <div className="w-8 h-8 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center">
+          <div className="w-8 h-8 bg-gradient-to-br from-[#7bcd40] to-[#6bb635] rounded-lg flex items-center justify-center">
             <Building2 className="w-5 h-5 text-white" />
           </div>
           <div>
@@ -89,8 +89,8 @@ export function AppSidebar() {
                     <SidebarMenuButton
                       asChild
                       className={cn(
-                        "w-full justify-start text-slate-700 hover:bg-orange-50 hover:text-orange-700",
-                        location.pathname === item.url && "bg-orange-100 text-orange-700 border-r-2 border-orange-500"
+                        "w-full justify-start text-slate-700 hover:bg-[#7bcd40]/10 hover:text-[#7bcd40]",
+                        location.pathname === item.url && "bg-[#7bcd40]/20 text-[#7bcd40] border-r-2 border-[#7bcd40]"
                       )}
                     >
                       <Link to={item.url} className="flex items-center space-x-3">
@@ -106,12 +106,20 @@ export function AppSidebar() {
         ))}
       </SidebarContent>
       
-      <SidebarFooter className="border-t border-orange-100 p-4">
+      <SidebarFooter className="border-t border-[#7bcd40]/20 p-4">
         <SidebarMenu>
           <SidebarMenuItem>
-            <SidebarMenuButton className="w-full justify-start text-slate-700 hover:bg-orange-50">
-              <Settings className="w-4 h-4" />
-              <span>Settings</span>
+            <SidebarMenuButton 
+              asChild
+              className={cn(
+                "w-full justify-start text-slate-700 hover:bg-[#7bcd40]/10 hover:text-[#7bcd40]",
+                location.pathname === "/settings" && "bg-[#7bcd40]/20 text-[#7bcd40] border-r-2 border-[#7bcd40]"
+              )}
+            >
+              <Link to="/settings" className="flex items-center space-x-3">
+                <Settings className="w-4 h-4" />
+                <span>Settings</span>
+              </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
           <SidebarMenuItem>

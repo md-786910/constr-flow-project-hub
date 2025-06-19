@@ -14,6 +14,7 @@ import { QuotingPage } from "@/components/pages/QuotingPage";
 import { PlanningPage } from "@/components/pages/PlanningPage";
 import { TimeTrackingPage } from "@/components/pages/TimeTrackingPage";
 import { SiteDocumentationPage } from "@/components/pages/SiteDocumentationPage";
+import { SettingsPage } from "@/components/pages/SettingsPage";
 import { LoginPage } from "@/components/pages/LoginPage";
 
 const Index = () => {
@@ -45,6 +46,7 @@ const Index = () => {
               <Route path="/planning" element={<PlanningPage />} />
               <Route path="/time-tracking" element={<TimeTrackingPage />} />
               <Route path="/site-docs" element={<SiteDocumentationPage />} />
+              <Route path="/settings" element={<SettingsPage />} />
             </Routes>
           </MainLayout>
         </div>
